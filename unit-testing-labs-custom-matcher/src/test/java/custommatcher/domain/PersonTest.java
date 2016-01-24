@@ -1,6 +1,7 @@
 package custommatcher.domain;
 
 import custommatcher.domain.testbuilders.TestBuilders;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static custommatcher.domain.IsPersonMatcher.isPerson;
@@ -14,6 +15,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class PersonTest {
 
     @Test
+    @Ignore
     public void givenOnePerson_whenUsingIsPersonMatcher_shouldBeSuccesfull() {
         Person person = TestBuilders.aPerson().build();
 
@@ -21,6 +23,7 @@ public class PersonTest {
     }
 
     @Test
+    @Ignore
     public void givenTwoIdenticalPersons_whenUsingIsPersonMatcher_shouldBeSuccesfull() {
         Person personA = TestBuilders.aPerson().build();
         Person personB = TestBuilders.aPerson().build();
@@ -29,6 +32,7 @@ public class PersonTest {
     }
 
     @Test(expected = AssertionError.class)
+    @Ignore
     public void givenTwoPersonsWithDifferentFirstName_whenUsingIsPersonMatcher_shouldFail() {
         Person personA = TestBuilders
                 .aPerson()
@@ -43,6 +47,7 @@ public class PersonTest {
     }
 
     @Test(expected = AssertionError.class)
+    @Ignore
     public void givenTwoPersonsLivingOnDifferentStreets_whenUsingIsPersonMatcher_shouldFail() {
         Person personA = TestBuilders
                 .aPerson()

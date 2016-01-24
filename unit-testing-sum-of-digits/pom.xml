@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>unit-testing-labs-sum-of-all-digits</artifactId>
+    <artifactId>sum-of-all-digits</artifactId>
 
     <!-- JUnit -->
     <dependencies>
