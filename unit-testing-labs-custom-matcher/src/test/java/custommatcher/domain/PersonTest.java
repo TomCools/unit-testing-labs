@@ -22,9 +22,10 @@ public class PersonTest {
 
     @Test
     public void givenTwoIdenticalPersons_whenUsingIsPersonMatcher_shouldBeSuccesfull() {
-        Person person = TestBuilders.aPerson().build();
+        Person personA = TestBuilders.aPerson().build();
+        Person personB = TestBuilders.aPerson().build();
 
-        //assertThat(person, isPerson(person));
+        //assertThat(personA, isPerson(personB));
     }
 
     @Test(expected = AssertionError.class)
