@@ -11,6 +11,7 @@
         <module>unit-testing-labs-fundamentals</module>
         <module>unit-testing-labs-custom-matcher</module>
         <module>unit-testing-sum-of-digits</module>
+        <module>unit-testing-labs-isp-meter</module>
     </modules>
     <packaging>pom</packaging>
 
