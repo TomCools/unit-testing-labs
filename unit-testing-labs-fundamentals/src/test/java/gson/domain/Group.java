@@ -1,4 +1,4 @@
-package gson.helpclasses;
+package gson.domain;
 
 import java.util.List;
 
