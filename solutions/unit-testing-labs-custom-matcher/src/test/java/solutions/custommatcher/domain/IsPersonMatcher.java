@@ -1,4 +1,4 @@
-package custommatcher.domain;
+package solutions.custommatcher.domain;
 
 import org.hamcrest.Description;
 import org.hamcrest.TypeSafeMatcher;

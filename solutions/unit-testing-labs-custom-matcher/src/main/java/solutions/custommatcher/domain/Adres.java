@@ -1,4 +1,4 @@
-package custommatcher.domain;
+package solutions.custommatcher.domain;
 
 import lombok.Value;
 
@@ -63,7 +63,7 @@ public class Adres {
         }
 
         public String toString() {
-            return "custommatcher.domain.Adres.AdresBuilder(street=" + this.street + ", number=" + this.number + ", bus=" + this.bus + ", city=" + this.city + ", postalCode=" + this.postalCode + ")";
+            return "Adres.AdresBuilder(street=" + this.street + ", number=" + this.number + ", bus=" + this.bus + ", city=" + this.city + ", postalCode=" + this.postalCode + ")";
         }
     }
 }

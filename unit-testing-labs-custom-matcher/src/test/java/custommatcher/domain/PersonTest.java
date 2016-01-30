@@ -40,6 +40,7 @@ public class PersonTest {
                 .build();
 
         //assertThat(personA, isPerson(personB));
+        throw new AssertionError();
     }
 
     @Test(expected = AssertionError.class)
@@ -54,5 +55,6 @@ public class PersonTest {
                 .build();
 
         //assertThat(personA, isPerson(personB));
+        throw new AssertionError();
     }
 }

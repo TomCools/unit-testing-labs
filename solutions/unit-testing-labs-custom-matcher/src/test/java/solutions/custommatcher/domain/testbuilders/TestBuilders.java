@@ -1,7 +1,7 @@
-package custommatcher.domain.testbuilders;
+package solutions.custommatcher.domain.testbuilders;
 
-import custommatcher.domain.Adres;
-import custommatcher.domain.Person;
+import solutions.custommatcher.domain.Adres;
+import solutions.custommatcher.domain.Person;
 
 import java.util.Date;
 

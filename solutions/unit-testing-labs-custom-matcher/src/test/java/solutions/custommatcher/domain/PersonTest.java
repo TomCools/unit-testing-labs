@@ -1,9 +1,9 @@
-package custommatcher.domain;
+package solutions.custommatcher.domain;
 
-import custommatcher.domain.testbuilders.TestBuilders;
+import solutions.custommatcher.domain.testbuilders.TestBuilders;
 import org.junit.Test;
 
-import static custommatcher.domain.IsPersonMatcher.isPerson;
+import static solutions.custommatcher.domain.IsPersonMatcher.isPerson;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 /**

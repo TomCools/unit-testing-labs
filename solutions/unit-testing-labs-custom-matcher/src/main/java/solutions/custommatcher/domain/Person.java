@@ -1,4 +1,4 @@
-package custommatcher.domain;
+package solutions.custommatcher.domain;
 
 import lombok.Value;
 
@@ -57,7 +57,7 @@ public class Person {
         }
 
         public String toString() {
-            return "custommatcher.domain.Person.PersonBuilder(firstName=" + this.firstName + ", lastName=" + this.lastName + ", birthdate=" + this.birthdate + ", adres=" + this.adres + ")";
+            return "Person.PersonBuilder(firstName=" + this.firstName + ", lastName=" + this.lastName + ", birthdate=" + this.birthdate + ", adres=" + this.adres + ")";
         }
     }
 }
