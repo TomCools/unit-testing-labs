@@ -27,6 +27,38 @@ public class BrutoNettoBerekeningResultaat {
         this.nettoLoon = nettoLoon;
     }
 
+    public Double getBrutoLoon() {
+        return brutoLoon;
+    }
+
+    public ContractType getContractType() {
+        return contractType;
+    }
+
+    public LoonContext getLoonContext() {
+        return loonContext;
+    }
+
+    public LoonType getLoonType() {
+        return loonType;
+    }
+
+    public Double getRszBijdrage() {
+        return rszBijdrage;
+    }
+
+    public Double getBelastbaarLoon() {
+        return belastbaarLoon;
+    }
+
+    public Double getBedrijfsvoorheffing() {
+        return bedrijfsvoorheffing;
+    }
+
+    public Double getNettoLoon() {
+        return nettoLoon;
+    }
+
     public static BrutoNettoBerekeningResultaatBuilder builder() {
         return new BrutoNettoBerekeningResultaatBuilder();
     }
@@ -40,6 +72,8 @@ public class BrutoNettoBerekeningResultaat {
         private Double belastbaarLoon;
         private Double bedrijfsvoorheffing;
         private Double nettoLoon;
+
+
 
         BrutoNettoBerekeningResultaatBuilder() {
         }

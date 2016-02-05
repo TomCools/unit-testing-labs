@@ -1,5 +1,6 @@
 package unittesting.berekeningen.loon;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -26,6 +27,11 @@ public class BedrijfsvoorheffingBerekeningTest {
     private BedrijfsvoorheffingBerekening sut;
 
     private MockHelper mock = new MockHelper();
+
+    @Before
+    public void init() {
+        mock.voorheffingSchalen();
+    }
 
     @Test
     public void givenAlleenStaandPersoon_whenBerekenenBedrijfsvoorHeffing_gebruiktSchaal1() {
@@ -57,7 +63,6 @@ public class BedrijfsvoorheffingBerekeningTest {
 
     @Test
     public void givenWerknemerMet1000BelastbaarLoon_whenBerekenBedrijfsVoorheffingVoorSchalen_SelecteertDeJuisteWaardeUitDeSchaal() {
-        mock.voorheffingSchalen();
 
         Double bedrijfsvoorheffing = sut.berekenBedrijfsvoorheffing(1000D, LoonType.WERKNEMER, LoonContext.ALLEENSTAANDE);
 
@@ -66,18 +71,57 @@ public class BedrijfsvoorheffingBerekeningTest {
 
     @Test
     public void givenWerknemerMet1600BelastbaarLoon_whenBerekenBedrijfsVoorheffingVoorSchalen_SelecteertDeJuisteWaardeUitDeSchaal() {
-        mock.voorheffingSchalen();
 
         Double bedrijfsvoorheffing = sut.berekenBedrijfsvoorheffing(1600D, LoonType.WERKNEMER, LoonContext.ALLEENSTAANDE);
 
         assertThat(bedrijfsvoorheffing, is(150D));
     }
 
+    @Test
+    public void givenBedrijfsleiderMet1000BelastbaarLoon_whenBerekenBedrijfsVoorheffingVoorSchalen_SelecteertDeJuisteWaardeUitDeSchaal() {
+
+        Double bedrijfsvoorheffing = sut.berekenBedrijfsvoorheffing(1000D, LoonType.BEDRIJFSLEIDER, LoonContext.ALLEENSTAANDE);
+
+        assertThat(bedrijfsvoorheffing, is(150D));
+    }
+
+    @Test
+    public void givenBedrijfsleiderMet1600BelastbaarLoon_whenBerekenBedrijfsVoorheffingVoorSchalen_SelecteertDeJuisteWaardeUitDeSchaal() {
+
+        Double bedrijfsvoorheffing = sut.berekenBedrijfsvoorheffing(1600D, LoonType.BEDRIJFSLEIDER, LoonContext.ALLEENSTAANDE);
+
+        assertThat(bedrijfsvoorheffing, is(170D));
+    }
+
+    @Test
+    public void givenGepensioneerdeMet1000BelastbaarLoon_whenBerekenBedrijfsVoorheffingVoorSchalen_SelecteertDeJuisteWaardeUitDeSchaal() {
+
+        Double bedrijfsvoorheffing = sut.berekenBedrijfsvoorheffing(1000D, LoonType.GEPENSIONEERDE, LoonContext.ALLEENSTAANDE);
+
+        assertThat(bedrijfsvoorheffing, is(60D));
+    }
+
+    @Test
+    public void givenGepensioneerdeMet1600BelastbaarLoon_whenBerekenBedrijfsVoorheffingVoorSchalen_SelecteertDeJuisteWaardeUitDeSchaal() {
+
+        Double bedrijfsvoorheffing = sut.berekenBedrijfsvoorheffing(1600D, LoonType.GEPENSIONEERDE, LoonContext.ALLEENSTAANDE);
+
+        assertThat(bedrijfsvoorheffing, is(80D));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void givenBelastbaarLoonBovenLoonschalen_whenBerekenBedrijfsVoorheffing_thenGooitException() {
+
+        sut.berekenBedrijfsvoorheffing(60000D, LoonType.BEDRIJFSLEIDER, LoonContext.EEN_VERDIENER_GEZIN);
+    }
+
     class MockHelper {
         public void voorheffingSchalen() {
             when(schaalService.haalSchaalwaardenOp(anyInt())).thenReturn(
-                    Arrays.asList(new SchaalWaarde(1000, 120, 150, 60),
-                            new SchaalWaarde(1500, 150, 170, 80)));
+                    Arrays.asList(new SchaalWaarde(0, 0, 0, 0),
+                            new SchaalWaarde(1000, 120, 150, 60),
+                            new SchaalWaarde(1500, 150, 170, 80),
+                            new SchaalWaarde(1900, 200, 230, 125)));
         }
 
     }

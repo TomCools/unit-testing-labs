@@ -26,7 +26,10 @@ public class BedrijfsvoorheffingSchaalService {
 
         Type type = new TypeToken<List<SchaalWaarde>>() {
         }.getType();
-        return new Gson().fromJson(entityResponse, type);
+        List<SchaalWaarde> schaalwaarden = new Gson().fromJson(entityResponse, type);
+        schaalwaarden.add(0, new SchaalWaarde(0, 0, 0, 0));
+
+        return schaalwaarden;
     }
 
 

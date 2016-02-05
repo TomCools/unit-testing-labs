@@ -14,13 +14,20 @@ public class BedrijfsvoorheffingBerekening {
 
         List<SchaalWaarde> schaalWaarden = schaalService.haalSchaalwaardenOp(schaal);
 
-        SchaalWaarde waarde = new SchaalWaarde(0, 0, 0, 0);
-        int i = 0;
-        do {
-            waarde = schaalWaarden.get(i);
-            i++;
-        } while (waarde.getAmount() > belastbaarLoon && i <= schaalWaarden.size());
+        SchaalWaarde vorigeSchaal = schaalWaarden.get(0);
 
+        for (SchaalWaarde schaalWaarde : schaalWaarden) {
+            if (schaalWaarde.getAmount() > belastbaarLoon) {
+                return bepaalWaardeInSchaal(vorigeSchaal, loonType);
+            } else {
+                vorigeSchaal = schaalWaarde;
+            }
+        }
+
+        throw new IllegalArgumentException("Bedragen boven de aangegeven schalen worden nog niet ondersteund.");
+    }
+
+    private Double bepaalWaardeInSchaal(SchaalWaarde waarde, LoonType loonType) {
         switch (loonType) {
             case WERKNEMER:
                 return waarde.getWerknemer();
@@ -28,9 +35,9 @@ public class BedrijfsvoorheffingBerekening {
                 return waarde.getBedrijfsleider();
             case GEPENSIONEERDE:
                 return waarde.getPensioen();
+            default:
+                throw new IllegalArgumentException("Loontype niet ondersteund.");
         }
-//Bedragen onder de gegeven schalen worden niet belast
-        return 0D;
     }
 
     private int bepaalBedrijfsvoorheffingSchaal(LoonContext loonContext) {
