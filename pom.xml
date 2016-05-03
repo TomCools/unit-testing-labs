@@ -12,7 +12,6 @@
         <module>unit-testing-labs-fundamentals</module>
         <module>solutions/unit-testing-labs-fundamentals</module>
         <module>unit-testing-labs-custom-matcher</module>
-        <!--<module>solutions/unit-testing-labs-custom-matcher</module> -->
         <module>unit-testing-sum-of-digits</module>
         <module>solutions/unit-testing-sum-of-digits</module>
         <module>unit-testing-labs-isp-meter</module>
@@ -54,6 +53,13 @@
             </dependency>
 
             <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-all</artifactId>
+                <version>1.9.5</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
                 <groupId>org.hamcrest</groupId>
                 <artifactId>hamcrest-all</artifactId>
                 <version>1.3</version>
@@ -63,13 +69,6 @@
                 <groupId>nl.jqno.equalsverifier</groupId>
                 <artifactId>equalsverifier</artifactId>
                 <version>1.7.3</version>
-                <scope>test</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>be.joengenduvel.java.verifiers</groupId>
-                <artifactId>to-string</artifactId>
-                <version>1.0-SNAPSHOT</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>
