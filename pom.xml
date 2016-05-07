@@ -19,6 +19,7 @@
         <module>unit-testing-labs-vaa</module>
         <module>solutions/unit-testing-labs-vaa</module>
         <module>unit-testing-labs-fizz-buzz</module>
+        <module>unit-testing-labs-bowling</module>
     </modules>
     <packaging>pom</packaging>
 
