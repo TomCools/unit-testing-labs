@@ -22,6 +22,7 @@
         <module>unit-testing-labs-bowling</module>
         <module>unit-testing-labs-string-calculator</module>
         <module>unit-testing-labs-tire-pressure</module>
+        <module>unit-testing-labs-entry-validator</module>
     </modules>
     <packaging>pom</packaging>
 

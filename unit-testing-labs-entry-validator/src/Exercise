@@ -1,0 +1,15 @@
+You are a manager of a Rollercoaster in a Theme Park.
+Unfortunatly, since the ride is "quite sick", not everyone is allowed to enter.
+
+Rules:
+- Kids below the age of 14 must be accompanied by a parent
+- Minimum Height is 1m10
+- Extra Care:
+    - People in wheelchairs are only allowed when accompanied by someone who can help them get on and off the ride.
+    - Pregant women are not allowed on the ride
+    - People with heart conditions are not allowed on the ride
+
+Write a class and unit tests that validate the entry of different customers based on the rules above.
+If a Customer is not allowed to enter, throw an exception.
+You are free to choose if you throw 1 exception with different message, or multiple exceptions.
+It must be clear why that person is not allowed on the ride.
