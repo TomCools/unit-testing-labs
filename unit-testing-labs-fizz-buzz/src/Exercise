@@ -1,0 +1,5 @@
+Write a program that given an integer returns a String:
+- Default: The integer;
+- For multiples of three: “Fizz” instead of the number
+- For the multiples of five: “Buzz”
+- For numbers which are multiples of both three and five return “FizzBuzz”.
