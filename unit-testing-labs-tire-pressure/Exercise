@@ -1,0 +1,6 @@
+Write unit tests for the Alarm class
+Refactor the code if needed to make the Alarm class testable
+There should be no changes to the public API (aka public methods)
+
+--- BONUS ---
+Make sure the alarm only is on during Office Hours (9am->5pm or 09:00 -> 17:00)

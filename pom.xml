@@ -21,6 +21,7 @@
         <module>unit-testing-labs-fizz-buzz</module>
         <module>unit-testing-labs-bowling</module>
         <module>unit-testing-labs-string-calculator</module>
+        <module>unit-testing-labs-tire-pressure</module>
     </modules>
     <packaging>pom</packaging>
 
