@@ -1,4 +1,4 @@
-package be.tomcools;
+package be.tirepressure;
 
 public class Alarm {
     private final double lowPressureThreshold = 17;
