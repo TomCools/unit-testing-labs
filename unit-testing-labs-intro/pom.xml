@@ -7,7 +7,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>intro</artifactId>
+    <artifactId>unit-testing-labs-intro</artifactId>
 
     <dependencies>
         <dependency>

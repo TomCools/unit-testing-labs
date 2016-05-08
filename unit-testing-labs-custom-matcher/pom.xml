@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>custom-matcher</artifactId>
+    <artifactId>unit-testing-labs-custom-matcher</artifactId>
 
     <dependencies>
         <dependency>
