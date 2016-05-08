@@ -1,4 +1,4 @@
-package bowling.domain;
+package entryvalidator.domain;
 
 import lombok.Builder;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package bowling.domain;
+package entryvalidator.domain;
 
 enum ExtraInfo {
     WHEELCHAIR,
