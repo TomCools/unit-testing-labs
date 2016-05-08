@@ -1,6 +1,6 @@
-package be.tomcools;
+package bowling;
 
-import be.tomcools.domain.Customer;
+import bowling.domain.Customer;
 
 public class EntryValidator {
     public void validate(Customer customer) {

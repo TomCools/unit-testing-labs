@@ -1,4 +1,4 @@
-package be.tomcools;
+package bowling;
 
 public class Test {
 }

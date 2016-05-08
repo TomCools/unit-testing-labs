@@ -1,4 +1,4 @@
-package be.tomcools.domain;
+package bowling.domain;
 
 enum ExtraInfo {
     WHEELCHAIR,
