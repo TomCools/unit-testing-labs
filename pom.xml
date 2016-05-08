@@ -11,6 +11,8 @@
         <module>solutions/unit-testing-labs-intro</module>
         <module>unit-testing-labs-fundamentals</module>
         <module>solutions/unit-testing-labs-fundamentals</module>
+        <module>solutions/unit-testing-labs-custom-matcher</module>
+        <module>solutions/unit-testing-labs-bowling</module>
         <module>unit-testing-labs-custom-matcher</module>
         <module>unit-testing-sum-of-digits</module>
         <module>solutions/unit-testing-sum-of-digits</module>
