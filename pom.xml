@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -8,16 +8,10 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>unit-testing-labs-intro</module>
-        <module>solutions/unit-testing-labs-intro</module>
         <module>unit-testing-labs-fundamentals</module>
-        <module>solutions/unit-testing-labs-fundamentals</module>
-        <module>solutions/unit-testing-labs-custom-matcher</module>
-        <module>solutions/unit-testing-labs-bowling</module>
         <module>unit-testing-labs-custom-matcher</module>
-        <module>unit-testing-sum-of-digits</module>
-        <module>solutions/unit-testing-sum-of-digits</module>
+        <module>unit-testing-labs-sum-of-digits</module>
         <module>unit-testing-labs-isp-meter</module>
-        <module>solutions/unit-testing-labs-isp-meter</module>
         <module>unit-testing-labs-vaa</module>
         <module>unit-testing-labs-fizz-buzz</module>
         <module>unit-testing-labs-bowling</module>
